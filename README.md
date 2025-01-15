@@ -1,74 +1,109 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Delicious Food Recipes App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and intuitive React application for managing your favorite recipes. Users can create, view, and delete recipes, while enjoying a beautifully styled interface.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Create Recipe**:
+  - Add a new recipe with details such as name, cuisine, photo URL, ingredients, and preparation instructions.
+- **View Recipes**:
+  - Display a list of recipes in a table format, showcasing all essential details, including an image of the dish.
+- **Delete Recipe**:
+  - Remove recipes from the list with a simple click.
+- **Responsive Design**:
+  - Styled for clarity and visual appeal with zebra-striped table rows and appropriate column widths.
 
-### `npm start`
+## Development Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Locate the `TODO` comments in the code to implement the necessary functionality.
+2. Use React state to manage the list of recipes.
+3. Ensure all input and button elements follow the specified naming conventions:
+   - `<input name="name">`
+   - `<input name="cuisine">`
+   - `<input name="photo">`
+   - `<textarea name="ingredients">`
+   - `<textarea name="preparation">`
+   - `<button name="delete">`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Form Requirements
 
-### `npm test`
+- The form for creating a recipe should include:
+  - **Name** (text input): Name of the dish.
+  - **Cuisine** (text input): Cuisine type.
+  - **Photo URL** (text input): URL of the dish photo.
+  - **Ingredients** (textarea): List of ingredients.
+  - **Preparation** (textarea): Instructions for preparing the dish.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Table Requirements
 
-### `npm run build`
+- Each recipe should display the following details in a table row:
+  - Name
+  - Cuisine
+  - Photo (scaled using `object-fit` with dimensions set to 100% for width and height).
+  - Ingredients (displayed in a scrollable box if content exceeds column width).
+  - Preparation (also scrollable).
+  - A **Delete** button to remove the recipe.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Styling Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Header**:
+   - The "Delicious Food Recipes" heading should:
+     - Use the 'Playfair Display SC' font (already imported).
+     - Be centered and sized at 64px.
+2. **Table Styling**:
+   - Set column widths using `nth-child`:
+     - Ingredients and preparation columns: 30%.
+     - Other columns: 10%.
+   - Apply zebra striping to rows in the `tbody` using `nth-child(odd)`.
+     - Suggested color: `#fff0c7`.
+3. **Scrollable Content**:
+   - Wrap ingredients and preparation text in a `<p>` tag inside a `<td>` with the `content_td` class.
+   - Apply scrollbars if text overflows.
+4. **Image Styling**:
+   - Use `object-fit: scale-down` to resize images proportionally.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Success Criteria
 
-### `npm run eject`
+### Functionality
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Users can:
+  - Create a new recipe entry, which is added to the end of the list.
+  - View all recipes in a well-structured table format.
+  - Delete any recipe from the list.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### React Code Organization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Use multiple components to separate concerns.
+- Maintain recipe data in the state for efficient updates.
+- Implement handlers and attributes as needed for interactivity.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### General Code Organization
 
-## Learn More
+- Avoid code duplication.
+- Use helper functions and reusable components where applicable.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the repository**:
 
-### Code Splitting
+   ```bash
+   git clone https://github.com/Gwong492/RecipeApp.git
+   cd recipe-app
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Install dependencies**:
 
-### Analyzing the Bundle Size
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Run the app**:
 
-### Making a Progressive Web App
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   The application will be available at `http://localhost:3000`.
 
-### Advanced Configuration
+##
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# RecipeApp
->>>>>>> 1ea1997781005f2539ac2bb408168be36bc9dee1
